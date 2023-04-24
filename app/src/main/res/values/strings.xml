@@ -27,4 +27,7 @@
     <string name="exit">Exit</string>
     <string name="play_again">Play Again</string>
     <string name="try_again">Try again!</string>
+    <string name="restartGameScore">SCORE: 0</string>
+    <string name="restartGameWcount">1 of 10 words</string>
+    <string name="gameWordCountEndTamplete">%s of 10 words"</string>
 </resources>
