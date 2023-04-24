@@ -99,6 +99,18 @@ class GameFragment : Fragment() {
         }
     }
 
+    /*
+* Skips the current word without changing the score.
+*/
+    private fun onSkipWord() {
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
+        }
+    }
+
     override fun onDetach() {
         super.onDetach()
         Log.d("GameFragment", "GameFragment destroyed!")
