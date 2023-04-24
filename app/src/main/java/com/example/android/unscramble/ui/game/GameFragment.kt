@@ -65,6 +65,8 @@ class GameFragment : Fragment() {
         binding.submit.setOnClickListener { onSubmitWord() }
         binding.skip.setOnClickListener { onSkipWord() }
 
+        binding.lifecycleOwner = viewLifecycleOwner
+
         // Observe the scrambledCharArray LiveData, passing in the LifecycleOwner and the observer.
         viewModel.currentScrambledWord.observe(viewLifecycleOwner,
             { newWord ->
@@ -81,6 +83,9 @@ class GameFragment : Fragment() {
                 binding.wordCount.text =
                     getString(R.string.word_count, newWordCount, MAX_NO_OF_WORDS)
             })
+
+        binding.lifecycleOwner = viewLifecycleOwner
+
     }
 
     /*
